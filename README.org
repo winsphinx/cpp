@@ -1,0 +1,73 @@
+* C++ PRIMER PLUS 5th EDTION by Stephen Prata (USA)
+
+** 一、预备知识
+
+** 二、开始学习
+   - #include
+   - main()
+   - 基本 I/O：cin / cout (istream / ostream)
+
+** 三、处理数据
+   - 整型：long, unsigned long, int, unsigned int, short, unsigned short, char, unsigned char, singed char, bool
+   - 浮点型：float, double, long double
+   - 自动转换类型 / 强制转换类型
+   - const 常量
+
+** 四、复合类型
+   - 数组
+   - 字符串
+     * getlie()
+     * get()
+   - 结构
+   - 共用体
+   - 枚举
+   - 指针
+   - 动态管理内存
+     - new
+     - delete
+
+** 五、循环和关系表达式
+   - 三种循环
+     - for
+     - while
+     - do...while
+   - 关系表达式：<, >, <=, >=, ==, !
+
+** 六、分支语句和逻辑操作符
+   - 分支语句
+     - if
+     - if...else
+     - switch
+     - continue / break
+   - 逻辑操作符：&&, ||, !
+   - 条件操作符：?:
+   - 文件 I/O：cin / cout (ifstream / ofstream)
+   - * cctype 字符函数库
+
+** 七、函数
+   - 函数原型
+   - 按值传递
+   - 递归
+
+** 八、函数探幽
+   - 内联函数：inline
+   - 引用变量：&
+   - 默认参数
+   - 函数重载：允许定义相同名称的函数，但特征标（即参数数目/参数类型）不同
+   - 函数模板：template <class 类型名称> 或写成：template <typename 类型名称>
+
+** 九、内存模型和命名空间
+   - 存储的持续性、作用域、链接性
+     | 存储描述       | 持续性 | 作用域 | 连接性 | 声明               |
+     |----------------+--------+--------+--------+--------------------|
+     | 自动           | 自动   | 代码块 | 无     | 代码块中，auto     |
+     | 寄存器         | 自动   | 代码块 | 无     | 代码块中，register |
+     | 静态无连接性   | 静态   | 代码块 | 无     | 代码块中，static   |
+     | 静态外部链接性 | 静态   | 文件   | 外部   | 在函数外           |
+     | 静态内部链接性 | 静态   | 文件   | 内部   | 在函数外，static   |
+   - 布局 new 操作符
+   - 名称空间
+
+** 十、对象和类
+   - 类概念
+   -
