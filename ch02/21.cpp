@@ -1,10 +1,9 @@
 #include <iostream>
 
-int main()
-{
-    using namespace std;
-    cout << "Hello~";
-    cout << endl;
+int main() {
+  using namespace std;
+  cout << "Hello~";
+  cout << endl;
 
-    return 0;
+  return 0;
 }

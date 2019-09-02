@@ -12,10 +12,9 @@
 
 #include <wx/app.h>
 
-class p24App : public wxApp
-{
+class p24App : public wxApp {
 public:
-    virtual bool OnInit();
+  virtual bool OnInit();
 };
 
 #endif // P24APP_H

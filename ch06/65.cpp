@@ -1,73 +1,68 @@
-#include <iostream>
-#include <cstring>
-#include <string>
 #include <cctype>
+#include <cstring>
+#include <iostream>
+#include <string>
 
 using namespace std;
-int main()
-{
-    int other = 0, vowel = 0, consonant = 0;
-    string word;
+int main() {
 
-    while (cin >> word, word != "q")
-    {
-        if (!isalpha (word[0]))
-        {
-            ++other;
-        }
-        else
-        {
-            switch (word[0])
-            {
-                case 'a':
-                    ++vowel;
-                    break;
+  int other = 0, vowel = 0, consonant = 0;
+  string word;
 
-                case 'A':
-                    ++vowel;
-                    break;
+  while (cin >> word, word != "q") {
+    if (!isalpha(word[0])) {
+      ++other;
+    } else {
+      switch (word[0]) {
+      case 'a':
+        ++vowel;
+        break;
 
-                case 'e':
-                    ++vowel;
-                    break;
+      case 'A':
+        ++vowel;
+        break;
 
-                case 'E':
-                    ++vowel;
-                    break;
+      case 'e':
+        ++vowel;
+        break;
 
-                case 'i':
-                    ++vowel;
-                    break;
+      case 'E':
+        ++vowel;
+        break;
 
-                case 'I':
-                    ++vowel;
-                    break;
+      case 'i':
+        ++vowel;
+        break;
 
-                case 'o':
-                    ++vowel;
-                    break;
+      case 'I':
+        ++vowel;
+        break;
 
-                case 'O':
-                    ++vowel;
-                    break;
+      case 'o':
+        ++vowel;
+        break;
 
-                case 'u':
-                    ++vowel;
-                    break;
+      case 'O':
+        ++vowel;
+        break;
 
-                case 'U':
-                    ++vowel;
-                    break;
+      case 'u':
+        ++vowel;
+        break;
 
-                default:
-                    ++consonant;
-            }
-        }
+      case 'U':
+        ++vowel;
+        break;
+
+      default:
+        ++consonant;
+      }
     }
+  }
 
-    cout << vowel << " words beginning with vowels.\n"
-         << consonant << " words beginning with consonants.\n"
-         << other << " others.\n";
+  cout << vowel << " words beginning with vowels.\n"
+       << consonant << " words beginning with consonants.\n"
+       << other << " others.\n";
 
-    return 0;
+  return 0;
 }

@@ -1,7 +1,6 @@
 #include <wx/wx.h>
 
-class Tetris : public wxFrame
-{
+class Tetris : public wxFrame {
 public:
-    Tetris (const wxString &title);
+  Tetris(const wxString &title);
 };

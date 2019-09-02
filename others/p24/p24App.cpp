@@ -14,21 +14,19 @@
 #include <wx/image.h>
 //*)
 
-IMPLEMENT_APP (p24App);
+IMPLEMENT_APP(p24App);
 
-bool p24App::OnInit()
-{
-    //(*AppInitialize
-    bool wxsOK = true;
-    wxInitAllImageHandlers();
+bool p24App::OnInit() {
+  //(*AppInitialize
+  bool wxsOK = true;
+  wxInitAllImageHandlers();
 
-    if (wxsOK)
-    {
-        p24Frame *Frame = new p24Frame (0);
-        Frame->Show();
-        SetTopWindow (Frame);
-    }
+  if (wxsOK) {
+    p24Frame *Frame = new p24Frame(0);
+    Frame->Show();
+    SetTopWindow(Frame);
+  }
 
-    //*)
-    return wxsOK;
+  //*)
+  return wxsOK;
 }

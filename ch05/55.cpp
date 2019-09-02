@@ -1,23 +1,21 @@
 #include <iostream>
 
-int main()
-{
-    std::cout << "Input a min number: ";
-    int min;
-    std::cin >> min;
+int main() {
+  std::cout << "Input a min number: ";
+  int min;
+  std::cin >> min;
 
-    std::cout << "Input a max number: ";
-    int max;
-    std::cin >> max;
+  std::cout << "Input a max number: ";
+  int max;
+  std::cin >> max;
 
-    int sum;
+  int sum;
 
-    for (int i = min; i <= max; ++i)
-    {
-        sum += i;
-    }
+  for (int i = min; i <= max; ++i) {
+    sum += i;
+  }
 
-    std::cout << "Sum [" << min << ", " << max << "] is " << sum << std::endl;
+  std::cout << "Sum [" << min << ", " << max << "] is " << sum << std::endl;
 
-    return 0;
+  return 0;
 }

@@ -1,46 +1,41 @@
-#include <iostream>
 #include "92head.h"
+#include <iostream>
 
-void other (void);
-void another (void);
-int main()
-{
-    using debts::Debt;
-    using debts::showDebt;
-    Debt golf = {{"Bunny", "Golf"}, 120.0};
-    showDebt (golf);
-    other();
-    another();
+void other(void);
+void another(void);
+int main() {
+  using debts::Debt;
+  using debts::showDebt;
+  Debt golf = {{"Bunny", "Golf"}, 120.0};
+  showDebt(golf);
+  other();
+  another();
 
-    return 0;
+  return 0;
 }
 
-void other (void)
-{
-    using std::cout;
-    using std::endl;
-    using namespace debts;
-    Person dg = {"Doodles", "Glister"};
-    showPerson (dg);
-    Debt zippy[3];
+void other(void) {
+  using std::cout;
+  using std::endl;
+  using namespace debts;
+  Person dg = {"Doodles", "Glister"};
+  showPerson(dg);
+  Debt zippy[3];
 
-    for (int i = 0; i < 3; i++)
-    {
-        getDebt (zippy[i]);
-    }
+  for (int i = 0; i < 3; i++) {
+    getDebt(zippy[i]);
+  }
 
-    for (int i = 0; i < 3; i++)
-    {
-        showDebt (zippy[i]);
-    }
+  for (int i = 0; i < 3; i++) {
+    showDebt(zippy[i]);
+  }
 
-    cout << "Total debt: $" << sumDebts (zippy, 3) << endl;
+  cout << "Total debt: $" << sumDebts(zippy, 3) << endl;
 }
 
-void another (void)
-{
-    using pers::Person;
-    Person collector = {"Milo", "Rightshift"};
-    pers::showPerson (collector);
-    std::cout << std::endl;
+void another(void) {
+  using pers::Person;
+  Person collector = {"Milo", "Rightshift"};
+  pers::showPerson(collector);
+  std::cout << std::endl;
 }

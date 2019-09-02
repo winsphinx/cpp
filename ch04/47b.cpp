@@ -1,32 +1,30 @@
-#include <iostream>
 #include <cstring>
+#include <iostream>
 #include <string>
 
 using namespace std;
 
-struct Pizza
-{
-    string company;
-    double diameter;
-    double weight;
+struct Pizza {
+  string company;
+  double diameter;
+  double weight;
 };
 
-int main()
-{
-    Pizza *pizza = new Pizza;
+int main() {
+  Pizza *pizza = new Pizza;
 
-    cout << "Input company: ";
-    getline (cin, pizza->company);
-    cout << "Input diameter: ";
-    cin >> pizza->diameter;
-    cout << "Input weight: ";
-    cin >> pizza->weight;
+  cout << "Input company: ";
+  getline(cin, pizza->company);
+  cout << "Input diameter: ";
+  cin >> pizza->diameter;
+  cout << "Input weight: ";
+  cin >> pizza->weight;
 
-    cout << pizza->company << endl;
-    cout << pizza->diameter << endl;
-    cout << pizza->weight << endl;
+  cout << pizza->company << endl;
+  cout << pizza->diameter << endl;
+  cout << pizza->weight << endl;
 
-    delete pizza;
+  delete pizza;
 
-    return 0;
+  return 0;
 }

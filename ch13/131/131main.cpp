@@ -1,7 +1,7 @@
-#include <iostream>
 #include "131head.h"
+#include <iostream>
 
-//int main()
+// int main()
 //{
 //    using std::cout;
 //    using std::endl;
@@ -25,68 +25,59 @@
 
 const int CLIENTS = 4;
 const int LEN = 40;
-int main()
-{
-    using std::cin;
-    using std::cout;
-    using std::endl;
-    Brass *p_clients[CLIENTS];
-    int i;
+int main() {
+  using std::cin;
+  using std::cout;
+  using std::endl;
+  Brass *p_clients[CLIENTS];
+  int i;
 
-    for (i = 0; i < CLIENTS; i++)
-    {
-        char temp[LEN];
-        long tempnum;
-        double tempbal;
-        char kind;
-        cout << "Enter clients name: ";
-        cin.getline (temp, LEN);
-        cout << "Enter clients account number: ";
-        cin >> tempnum;
-        cout << "Enter opening balance: $";
-        cin >> tempbal;
-        cout << "Enter 1 for Brass account or "
-             << "2 for BrassPlus account: ";
+  for (i = 0; i < CLIENTS; i++) {
+    char temp[LEN];
+    long tempnum;
+    double tempbal;
+    char kind;
+    cout << "Enter clients name: ";
+    cin.getline(temp, LEN);
+    cout << "Enter clients account number: ";
+    cin >> tempnum;
+    cout << "Enter opening balance: $";
+    cin >> tempbal;
+    cout << "Enter 1 for Brass account or "
+         << "2 for BrassPlus account: ";
 
-        while (cin >> kind && (kind != '1' && kind != '2'))
-        {
-            cout << "Enter either 1 or 2:";
-        }
-
-        if (kind == '1')
-        {
-            p_clients[i] = new Brass (temp, tempnum, tempbal);
-        }
-        else
-        {
-            double tmax, trate;
-            cout << "Enter the overdraft limit: $";
-            cin >> tmax;
-            cout << "Enter the interest rate "
-                 << "as a decimal fraction: ";
-            cin >> trate;
-            p_clients[i] = new BrassPlus (temp, tempnum, tempbal, tmax, trate);
-        }
-
-        while (cin.get() != '\n')
-        {
-            continue;
-        }
+    while (cin >> kind && (kind != '1' && kind != '2')) {
+      cout << "Enter either 1 or 2:";
     }
 
+    if (kind == '1') {
+      p_clients[i] = new Brass(temp, tempnum, tempbal);
+    } else {
+      double tmax, trate;
+      cout << "Enter the overdraft limit: $";
+      cin >> tmax;
+      cout << "Enter the interest rate "
+           << "as a decimal fraction: ";
+      cin >> trate;
+      p_clients[i] = new BrassPlus(temp, tempnum, tempbal, tmax, trate);
+    }
+
+    while (cin.get() != '\n') {
+      continue;
+    }
+  }
+
+  cout << endl;
+
+  for (i = 0; i < CLIENTS; i++) {
+    p_clients[i]->ViewAcct();
     cout << endl;
+  }
 
-    for (i = 0; i < CLIENTS; i++)
-    {
-        p_clients[i]->ViewAcct();
-        cout << endl;
-    }
+  for (i = 0; i < CLIENTS; i++) {
+    delete p_clients[i];
+  }
 
-    for (i = 0; i < CLIENTS; i++)
-    {
-        delete p_clients[i];
-    }
-
-    cout << "Done.\n";
-    return 0;
+  cout << "Done.\n";
+  return 0;
 }
